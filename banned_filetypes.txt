@@ -1,0 +1,8 @@
+bin
+o
+pdb
+rmeta
+rlib
+exe
+d
+dll

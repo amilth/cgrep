@@ -52,7 +52,10 @@ fn main() {
 
     // Determin what type of files to preform the search in.
     // let filetypes = vec!["rs", "txt", "sql"];
-    let filetypesban = vec!["bin", "o", "pdb", "rmeta", "rlib", "exe", "d"];
+    //let filetypesban = vec!["bin", "o", "pdb", "rmeta", "rlib", "exe", "d"];
+    //let banned_filetypes: Vec<str> = fs::File::open("banned_filetypes.txt");
+    let binding = fs::read_to_string("banned_filetypes.txt").unwrap();
+    let filetypesban: Vec<&str> = binding.split("\r\n").collect();
 
     // Use comfy_table to present result in a neat looking table.
     let mut table = Table::new();
