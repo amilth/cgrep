@@ -14,15 +14,15 @@ struct Config {
     #[clap(short, long, default_value_t = env::current_dir().unwrap().to_string_lossy().to_string())]
     directory: String,
 
-    //Search in content in files
+    ///Search in content in files
     #[clap(short, default_value_t = false)]
     contentsearch: bool,
 
-    //Search in path names in directories
+    ///Search in path names in directories
     #[clap(short, default_value_t = false)]
     pathnamesearch: bool,
 
-    //Seach in filenames.
+    ///Seach in filenames.
     #[clap(short, default_value_t = false)]
     filenamesearch: bool,
 }
